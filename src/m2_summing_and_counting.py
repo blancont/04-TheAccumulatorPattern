@@ -201,7 +201,7 @@ def count_sines_from(m, n):
 def run_test_count_sines_vs_cosines():
     """ Tests the   count_sines_vs_cosines   function. """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this TEST function.
+    # DONE: 6. Implement this TEST function.
     #   It TESTS the  count_sines_vs_cosines  function defined below.
     #   Include at least **   6   ** tests (we wrote one for you).
     #              ** Yes, 6 (six) tests. **
@@ -223,6 +223,30 @@ def run_test_count_sines_vs_cosines():
     # TO DO: 6 (continued).
     # Below this comment, add 5 more test cases of your own choosing.
     # ------------------------------------------------------------------
+    ans = count_sines_vs_cosines(1)
+    expect = 1
+    print('Test 2 expected:', expect)
+    print('       actual:  ', ans)
+
+    ans = count_sines_vs_cosines(2)
+    expect = 2
+    print('Test 3 expected:', expect)
+    print('       actual:  ', ans)
+
+    ans = count_sines_vs_cosines(3)
+    expect = 4
+    print('Test 4 expected:', expect)
+    print('       actual:  ', ans)
+
+    ans = count_sines_vs_cosines(4)
+    expect = 5
+    print('Test 5 expected:', expect)
+    print('       actual:  ', ans)
+
+    ans = count_sines_vs_cosines(5)
+    expect = 6
+    print('Test 6 expected:', expect)
+    print('       actual:  ', ans)
 
 
 def count_sines_vs_cosines(m):
@@ -250,13 +274,18 @@ def count_sines_vs_cosines(m):
       -- Also:  count_sines_vs_cosines(101) returns 100 (trust me!)
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
     #   you must NOT use the 2 or 3-parameter versions
     #   of the RANGE expression, if you happen to know them.
     # ------------------------------------------------------------------
+    count = 0
+    for k in range((m * 2) + 1):
+        if math.sin(k - m) > math.cos(k - m):
+            count = count + 1
+    return count
 
 
 # ----------------------------------------------------------------------

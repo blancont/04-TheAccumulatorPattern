@@ -47,8 +47,7 @@ def run_test_draw_parallel_lines():
     window1 = rg.RoseWindow(600, 350, title)
 
     # Test 1:
-    left_most_point
-    window1.close_on_mouse_click() = rg.Point(400, 50)
+    left_most_point = rg.Point(400, 50)
     draw_parallel_lines(7, left_most_point, 100, window1)
 
     # Test 2:
